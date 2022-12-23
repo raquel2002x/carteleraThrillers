@@ -2,12 +2,12 @@ const requestURL = "../json/peliculas.json";
 
 async function fetchMoviesJson(){
     const response = await fetch(requestURL);
-    const playlists = await response.json();
-    return playlists;
+    const movies = await response.json();
+    return movies;
 }
 
-fetchMoviesJson().then(playlists => {
-    for (let index = 0; index < playlists.listasReproduccion.length; index++)
+fetchMoviesJson().then(movies => {
+    for (let index = 0; index < movies.peliculas.leght; index++)
     {
         const movieSection = document.getElementById('moviesSection');
 
